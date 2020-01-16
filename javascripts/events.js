@@ -216,7 +216,6 @@ let EventManager = {
                     getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                     getPlayerHealth.innerHTML = 'Health: ' + player.health;
                     getEnemyHealth.innerHTML = 'Health: 0';
-                    alert("Select another action before fighting again!");
                 } else {
                     getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
                 }
