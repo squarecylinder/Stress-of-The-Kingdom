@@ -169,7 +169,7 @@ let EventManager = {
             let PlayerAttackValues = playerAttack();
             let totalDamage = PlayerAttackValues[0] * PlayerAttackValues[1];
             enemy.health = enemy.health - totalDamage;
-            getArena.innerHTML = '<div><p>You hit the ' + enemy.enemyType + ' for ' + PlayerAttackValues[0] + ' damage ' + PlayerAttackValues[1] + ' times!</p><button class="btn-attack" onclick="EventManager.FightEvent()"> Attack!</button></div>';
+            getArena.innerHTML = '<div><p>You hit the ' + enemy.enemyType + ' for ' + PlayerAttackValues[0] + ' damage ' + PlayerAttackValues[1] + ' times!<button class="btn-attack" onclick="EventManager.FightEvent()">Attack!</button></p></div>';
             if (enemy.health <= 0) {
                 player.gold = player.gold + enemy.gold;
                 player.xp = player.xp + enemy.xp;
@@ -181,7 +181,7 @@ let EventManager = {
                 let enemyAttackValues = enemyAttack();
                 let totalDamage = enemyAttackValues[0] * enemyAttackValues[1];
                 player.health = player.health - totalDamage;
-                getArena.innerHTML = '<div><p>The ' + enemy.enemyType + ' hit you for ' + enemyAttackValues[0] + ' damage ' + enemyAttackValues[1] + ' times!</p><button class="btn-attack" onclick="EventManager.FightEvent()"> Attack!</button></div>';
+                getArena.innerHTML = '<div><p>The ' + enemy.enemyType + ' hit you for ' + enemyAttackValues[0] + ' damage ' + enemyAttackValues[1] + ' times!<button class="btn-attack" onclick="EventManager.FightEvent()">Attack!</button></p></div>';
                 getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 if (player.health <= 0) {
@@ -197,7 +197,7 @@ let EventManager = {
                 let enemyAttackValues = enemyAttack();
                 let totalDamage = enemyAttackValues[0] * enemyAttackValues[1];
                 player.health = player.health - totalDamage;
-                getArena.innerHTML = '<div><p>The ' + enemy.enemyType + 'hit you for ' + enemyAttackValues[0] + ' damage ' + enemyAttackValues[1] + ' times!</p><button class="btn-attack" onclick="EventManager.FightEvent()"> Attack!</button></div>';
+                getArena.innerHTML = '<div><p>The ' + enemy.enemyType + 'hit you for ' + enemyAttackValues[0] + ' damage ' + enemyAttackValues[1] + ' times!<button class="btn-attack" onclick="EventManager.FightEvent()">Attack!</button></p></div>';
                 if (player.health <= 0) {
                     player.xp = player.xp + (enemy.xp / 2);
                     getArena.innerHTML ='<div><p>After a gruelling battle, you lost. Maybe you should rest before fighting again.<br>Gained ' + enemy.xp + '!'
@@ -207,7 +207,7 @@ let EventManager = {
                 let PlayerAttackValues = playerAttack();
                 let totalDamage = PlayerAttackValues[0] * PlayerAttackValues[1];
                 enemy.health = enemy.health - totalDamage;
-                getArena.innerHTML = '<div><p>You hit the ' + enemy.enemyType + ' for ' + PlayerAttackValues[0] + ' damage ' + PlayerAttackValues[1] + ' times!</p><button class="btn-attack" onclick="EventManager.FightEvent()"> Attack!</button></div>';
+                getArena.innerHTML = '<div><p>You hit the ' + enemy.enemyType + ' for ' + PlayerAttackValues[0] + ' damage ' + PlayerAttackValues[1] + ' times!<button class="btn-attack" onclick="EventManager.FightEvent()">Attack!</button></p></div>';
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 if (enemy.health <= 0) {
                     player.gold = player.gold + enemy.gold;
