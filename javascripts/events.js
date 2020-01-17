@@ -161,7 +161,7 @@ let EventManager = {
             }
             let offsetDamage = Math.floor(Math.random() * Math.floor(6))
             let calcOutputDamager = calcBaseDamage + offsetDamage;
-            let numberOfHits = Math.floor(Math.random * Math.floor(enemy.dexterity / 6) / 2) + 1 ;
+            let numberOfHits = Math.floor(Math.random() * Math.floor(enemy.dexterity / 6) / 2) + 1 ;
             let attackValues = [calcOutputDamager, numberOfHits];
             return attackValues;
         }
