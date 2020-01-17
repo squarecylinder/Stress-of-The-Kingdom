@@ -1,3 +1,161 @@
+img {
+    width: 160px;
+    border-radius: 30%;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    justify-content: center;
+  }
+  body {
+    background-color: #1b1b1b;
+  }
+  .header {
+    background-color: #1b1b1b;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .header p {
+    font-family: arial;
+    font-size: 18px;
+    color: #fff;
+    padding-bottom: 4px;
+  }
+  .header h2 {
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: #f8b700;
+  }
+  .interface {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1b1b1b;
+  }
+  .interface a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .interface img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .img-avatar {
+    width: 160px !important;
+    height: 160px !important;
+  }
+  
+  .interface div {
+    width: 220px;
+    padding: 0 10px 0 20px;
+  }
+  
+  .interface a:hover div {
+    background-color: #3c1d3d;
+  }
+  
+  .interface h3 {
+    font-family: 'Acme', sans-serif;
+    font-size: 22px;
+    color: #f8b700;
+    padding: 12px 0 4px;
+  }
+  
+  .interface p {
+    font-family: arial;
+    font-size: 12px;
+    color: #d5c8af;
+    line-height: 20px;
+  }
+  
+  .btn-prefight {
+    width: 100% !important;
+  }
+  
+  .actions {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .actions a {
+    width: 33.33%;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 14px;
+    font-family: arial;
+    color: #1b1b1b;
+  }
+  
+  .actions a:nth-of-type(1) {
+    background-color: #e64747;
+  }
+  
+  .actions a:nth-of-type(2) {
+    background-color: #e6ce47;
+  }
+  
+  .actions a:nth-of-type(3) {
+    background-color: #6de647;
+  }
+
+  .actions a:nth-of-type(4) {
+      background-color: aquamarine;
+  }
+  
+  .actions a:hover {
+    opacity: 0.9;
+  }
+  
+  .enemy {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #1b1b1b;
+  }
+  
+  .enemy a {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .enemy img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .enemy div {
+    width: 220px;
+    padding: 0 10px 0 20px;
+  }
+  
+  .enemy a:hover div {
+    background-color: #3c1d3d;
+  }
+  
+  .enemy h3 {
+    font-family: 'Acme', sans-serif;
+    font-size: 22px;
+    color: #f8b700;
+    padding: 12px 0 4px;
+  }
+  
+  .enemy p {
+    font-family: arial;
+    font-size: 12px;
+    color: #d5c8af;
+    line-height: 20px;
+  }
 body {
     background-color: #1b1b1b;
 }
@@ -5,21 +163,19 @@ body {
     font-family: 'Acme';
     color: #59d4af;
     text-align: center;
-    
 }
 .arena {
-    position: absolute;
     color: white;
     font-size: larger;
-    justify-content: left;
-    top: 150px;
-    left: 200px;
+    text-align: center;
 }
 .btn-start {
-    background-color: #59d4af;
-    border-radius: 13%;
-    height: 100px;
-    font-family: fantasy;
+    padding: 7.5%;
+    background-color: black;
+    color: cadetblue;
+    font-size: xx-large;
+    font-family: 'Acme';
+    border-radius: 25px;
 }
 .gamestart {
         display: flex;
@@ -33,93 +189,21 @@ body {
     display: flex;
     align-items: center;
 }
-
-.text-block-stats h1 {
-    position: absolute;
-    top: 120px;
-    right: 250px;
-    background-color: black;
-    color : white;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
 .btn-classpick{
-    position: absolute;
-    margin-top: -10%;
-    margin-bottom: -10%;
-    margin-left: -50%;
-    margin-right: 50%;
     padding: 7.5%;
     background-color: black;
     color: cadetblue;
     font-size: xx-large;
     font-family: 'Acme';
     border-radius: 25px;
-
-}
-.CPWarrior img {
-    width: 120px;
-    position: absolute;
-    justify-content: left;
-    top: 150px;
-    left: 200px;
-    border-radius: 30%;
-}
-.CPWarrior h3{
-    position: absolute;
-    top: 180px;
-    left: 350px;
-}
-.CPRogue img {
-    position: absolute;
-    width: 120px;
-    top: 300px;
-    left: 200px;
-    border-radius: 30%;
-}
-.CPRogue h3{
-    position: absolute;
-    top: 325px;
-    left: 350px;
-}
-.CPMage img {
-    position: absolute;
-    width: 120px;
-    top: 440px;
-    left: 200px;
-    border-radius: 30%;
-}
-.CPMage h3{
-    position: absolute;
-    top: 470px;
-    left: 350px;
-}
-
-.CPHunter img {
-    position: absolute;
-    width: 120px;
-    top: 590px;
-    left: 200px;
-    border-radius: 30%;
-}
-.CPHunter h3{
-    position: absolute;
-    top: 615px;
-    left: 350px;
 }
 .img-avatar {
-    width: 145px;
-    height: 145px;
-    position: absolute;
-    top: 200px;
-    right: 220px;
+    justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 30%;
 }
 .classType{
-    position: absolute;
     top: 350px;
     right: 270px;
     font-weight: bold;
@@ -129,9 +213,6 @@ body {
     font-family: 'Acme';
 }
 .health-player{
-    position: absolute;
-    top: 375px;
-    right: 270px;
     font-weight: bold;
     color: white;
     background-color: black;
@@ -139,9 +220,6 @@ body {
     font-family: 'Acme';
 }
 .mana-player{
-    position: absolute;
-    top: 400px;
-    right: 270px;
     font-weight: bold;
     color: white;
     background-color: black;
@@ -149,9 +227,6 @@ body {
     font-family: 'Acme';
 }
 .strength-player{
-    position: absolute;
-    top: 425px;
-    right: 270px;
     font-weight: bold;
     color: white;
     background-color: black;
@@ -159,9 +234,6 @@ body {
     font-family: 'Acme';
 }
 .dexterity-player{
-    position: absolute;
-    top: 450px;
-    right: 270px;
     font-weight: bold;
     color: white;
     background-color: black;
@@ -169,9 +241,6 @@ body {
     font-family: 'Acme';
 }
 .gold-player{
-    position: absolute;
-    top: 475px;
-    right: 270px;
     font-weight: bold;
     color: white;
     background-color: black;
@@ -179,11 +248,8 @@ body {
     font-family: 'Acme';
 }
 .btn-search {
-    position: absolute;
-    top: 600px;
-    right: 300px;
     background-color: #4CAF50; 
-    border: none;
+    border: thin;
     color: white;
     padding: 10px 30px;
     text-align: center;
@@ -192,7 +258,7 @@ body {
     font-size: 14px;
 }
 .btn-rest {
-    position: absolute;
+    
     top: 600px;
     right: 200px;
     background-color: gray; 
@@ -205,7 +271,7 @@ body {
     font-size: 14px;
 }
 .btn-fight {
-    position: absolute;
+    
     top: 650px;
     right: 300px;
     background-color: crimson; 
@@ -218,7 +284,7 @@ body {
     font-size: 14px;
 }
 .btn-talk {
-    position: absolute;
+    
     top: 650px;
     right: 200px;
     background-color: darkcyan;
@@ -231,7 +297,7 @@ body {
     font-size: 14px;
 }
 .btn-reset {
-    position: absolute;
+    
     top: 750px;
     right: 200px;
     background-color: black;
@@ -253,17 +319,11 @@ justify-content: left;
 .img-enemy {
     width: 145px;
     height: 145px;
-    position: absolute;
-    top: 200px;
-    left: 220px;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 30%;
 }
 .mana-enemy{
-    position: absolute;
-    top: 400px;
-    left: 270px;
     font-weight: bold;
     color: white;
     background-color: black;
@@ -271,9 +331,6 @@ justify-content: left;
     font-family: 'Acme';
 }
 .health-enemy{
-    position: absolute;
-    top: 375px;
-    left: 270px;
     font-weight: bold;
     color: white;
     background-color: black;
@@ -281,9 +338,6 @@ justify-content: left;
     font-family: 'Acme';
 }
 .type-enemy{
-    position: absolute;
-    top: 350px;
-    left: 270px;
     font-weight: bold;
     color: white;
     background-color: black;

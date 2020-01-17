@@ -10,7 +10,7 @@ let GameManager = {
         getGameStart.innerHTML = '<div></div>';
         getActions.style.visibility = "hidden";
         getInterface.style.visibility = "visible";
-        getInterface.innerHTML = '<div><img src="img/assets/GUI.png" alt="Main GUI"></div><div class="text-block-stats"><h1>Stats: </h1></div><div><button class="btn-classpick" onclick="GameManager.setClassPick()">Pick a class!</button></div>';
+        getInterface.innerHTML = '<div><button class="btn-classpick" onclick="GameManager.setClassPick()">Pick a class!</button></div>';
 
         },
     setClassPick: function(classType) {
