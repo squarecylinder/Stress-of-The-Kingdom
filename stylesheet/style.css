@@ -248,7 +248,7 @@ background-color: crimson;
 color: white;
 padding: 10px 30px;
 text-align: center;
-justify-content: center;
+justify-content: left;
 }
 .img-enemy {
     width: 145px;
