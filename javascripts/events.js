@@ -240,8 +240,11 @@ let EventManager = {
 }
 let TalkManager = {
     TalkEvent: function() {
+        let getArena = document.querySelector(".arena");
         let getEnemy = document.querySelector(".enemy");
         getEnemy.style.visibility = 'hidden';
+        getArena.innerHTML = '<div><p>You can see a few people by a camp fire, Would you like to speak with them? <button class="btn-talkevent">Yes</button><button class="btn notalk">No</button></p></div>';
+
 
     }
 }
