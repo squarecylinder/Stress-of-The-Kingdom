@@ -243,11 +243,19 @@ let TalkManager = {
         let getArena = document.querySelector(".arena");
         let getEnemy = document.querySelector(".enemy");
         getEnemy.style.visibility = 'hidden';
-        getArena.innerHTML = '<div><p>You can see a few people by a camp fire, Would you like to speak with them? <button class="btn-talkevent" onclick="TalkManager.talktoevent()">Yes</button><button class="btn notalk" onclick="notalk()">No</button></p></div>';
-        let talktoevent = function() {
-           getArena.innerHTML = '<div><p>"Whose there!?" One of the people yell out from the clearing.</p></div>';
-       } 
-
+        getArena.innerHTML = '<div><p>You can see a few people by a camp fire. As they see you, they introduce themselves. <br> Who would you like to speak to? <button onclick="NPCManager.setNPC(`Josh`)">Josh</button> <button onclick="NPCManager.setNPC(`Amber`)">Amber</button> <button onclick="NPCManager.setNPC(`Jalen`)">Jalen</button></p></div>';
+    
+        switch (npcType) {
+            case "Josh":
+                getArena.innerHTML = "Hi i'm josh, what can I do for ya?";
+                break;
+            case "Amber":
+                getArena.innerHTML = "Hey there sweetie, would you like to buy some sweets?";
+                break;
+            case "Jalen":
+                getArena.innerHTML = "Are you looking for some weapons?";
+                break;
+        }
 
     }
 }
