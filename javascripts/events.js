@@ -81,7 +81,7 @@ let EventManager = {
                     getArena.innerHTML = "<div><p>You didn't find anything worth writing home about.</p></div>";
                     break;
                 case 1:
-                    getArena.innerHTML = "<div><p>A nice sunny day is exactly what you needed, you dind't find anything though.</p></div>";
+                    getArena.innerHTML = "<div><p>A nice sunny day is exactly what you needed, you didn't find anything though.</p></div>";
                     break;
                 case 2:
                     getArena.innerHTML = "<div><p>You should never search a forest alone. You didn't run into anything, so it worked out this time</p></div>";
