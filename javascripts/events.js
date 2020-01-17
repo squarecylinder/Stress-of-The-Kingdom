@@ -75,7 +75,18 @@ let EventManager = {
             }
         }
         else {
-            getArena.innerHTML = "<div><p>Neutral events. Still working on randomizing them :p</p></div>";
+            let randNeutral = Math.floor(Math.random() * Math.floor(3))
+            switch (randNeutral) {
+                case 0:
+                    getArena.innerHTML = '<div><p>You did not find anything worth writing home about.</p></div>';
+                    break;
+                case 1:
+                    getArena.innerHTML = "<div><p>A nice sunny day is exactly what you needed, you dind't find anything though.</p></div>";
+                    break;
+                case 2:
+                    getArena.innerHTML = "<div><p>You should never search a forest alone. You didn't run into anything, so it worked out this time</p></div>";
+                    break;
+            }
         }
         
         
