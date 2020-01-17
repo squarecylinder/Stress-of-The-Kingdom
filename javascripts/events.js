@@ -197,7 +197,7 @@ let EventManager = {
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 if (player.health <= 0) {
                     player.xp = player.xp + (enemy.xp / 2);
-                    getArena.innerHTML ='<div><p>After a gruelling battle, you lost. Maybe you should rest before fighting again.<br>Gained ' + enemy.xp + '!'
+                    getArena.innerHTML ='<div><p>After a gruelling battle, you lost. Maybe you should rest before fighting again.<br>Gained ' + enemy.xp + '!';
                     getPlayerHealth.innerHTML = 'Health: 0';
                     getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
                 } else {
@@ -211,7 +211,7 @@ let EventManager = {
                 getArena.innerHTML = '<div><p>The ' + enemy.enemyType + 'hit you for ' + enemyAttackValues[0] + ' damage ' + enemyAttackValues[1] + ' times!<button class="btn-attack" onclick="EventManager.FightEvent()">Attack!</button></p></div>';
                 if (player.health <= 0) {
                     player.xp = player.xp + (enemy.xp / 2);
-                    getArena.innerHTML ='<div><p>After a gruelling battle, you lost. Maybe you should rest before fighting again.<br>Gained ' + enemy.xp + '!'
+                    getArena.innerHTML ='<div><p>After a gruelling battle, you lost. Maybe you should rest before fighting again.<br>Gained ' + enemy.xp + '!';
                     getPlayerHealth.innerHTML = 'Health: 0';
                     getEnemyHealth.innerHTML = 'Health: ' + enemy.health; 
             } else {
@@ -243,7 +243,10 @@ let TalkManager = {
         let getArena = document.querySelector(".arena");
         let getEnemy = document.querySelector(".enemy");
         getEnemy.style.visibility = 'hidden';
-        getArena.innerHTML = '<div><p>You can see a few people by a camp fire, Would you like to speak with them? <button class="btn-talkevent">Yes</button><button class="btn notalk">No</button></p></div>';
+        getArena.innerHTML = '<div><p>You can see a few people by a camp fire, Would you like to speak with them? <button class="btn-talkevent" onclick="TalkManager.talktoevent()">Yes</button><button class="btn notalk" onclick="notalk()">No</button></p></div>';
+        let talktoevent = function() {
+           getArena.innerHTML = '<div><p>"Whose there!?" One of the people yell out from the clearing.</p></div>';
+       } 
 
 
     }
