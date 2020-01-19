@@ -128,7 +128,7 @@ let EventManager = {
         let getEnemy = document.querySelector(".enemy");
         let goblin = new Enemy("Goblin", 100, 0, 20, 50, 100, 100);
         let troll = new Enemy("Troll", 200, 0, 40, 50, 80, 150);
-        let thuuxenk = new Enemy("Thuu'xenk", 300, 300, 300, 300, 300, 300) 
+        let thuuxenk = new Enemy("Thuuxenk", 300, 300, 300, 300, 300, 300) 
         let chooseRandomEnemy= Math.floor(Math.random() * Math.floor(3));
         switch (chooseRandomEnemy) {
             case 0:
@@ -142,7 +142,7 @@ let EventManager = {
             case 2:
                 enemy = thuuxenk;
                 
-                getArena.innerHTML
+                getArena.innerHTML = "<div><p>WIP, you wouldn't win anyway. Just reroll a monster.</p></div?"
         }
         getEnemy.innerHTML = '<img src="img/avatar-enemy/' + enemy.enemyType.toLowerCase() + '.jpg" alt="' + enemy.enemyType + '" class="img-enemy"><div><h3 class="type-enemy">' + enemy.enemyType + '</h3><p class="health-enemy">Health: ' + enemy.health + '</p><p class="mana-enemy">Mana: ' + enemy.mana + '</P><p class="dexterity-enemy>Dexterity :' + enemy.dexterity + '</p></div>';
     },
