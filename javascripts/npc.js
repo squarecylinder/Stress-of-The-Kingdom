@@ -22,15 +22,37 @@ let NPCManager = {
         let getArena = document.querySelector(".arena");
         switch (npcType) {
             case "Josh":
-                getArena.innerHTML = `<div><p>Hi i'm josh, what can I do for ya? <br> <button class="btn-dialog">Rumors?</button> <button class="btn-dialog">Where is town?</button></p></div>`;
+                getArena.innerHTML = `<div><p>Hi i'm josh, what can I do for ya? <br> <button class="btn-dialog" onclick="NPCManager.NPCdialog('rumors')">Rumors?</button> <button class="btn-dialog" onclick="NPCManager.NPCdialog('town')">Where is town?</button></p></div>`;
                 break;
             case "Amber":
-                getArena.innerHTML = `<div><p>Hey there sweetie, would you like to buy some sweets? <br><button class="btn-dialog">Cheese Cake</button> <button class="btn-dialog">Apple Pie</button> <button class="btn-dialog">Do you have any meat?</button> </p></div>`;
+                getArena.innerHTML = `<div><p>Hey there sweetie, would you like to buy some sweets? <br><button class="btn-dialog" onclick="NPCManager.NPCdialog('cheesecake')">Cheese Cake Cost: 150G</button> <button class="btn-dialog" onclick="NPCManager.NPCdialog('applepie')">Apple Pie Cost: 250G</button> <button class="btn-dialog" onclick="NPCManager.NPCdialog('meat')">Do you have any meat?</button> </p></div>`;
                 break;
             case "Jalen":
-                getArena.innerHTML = `<div><p>Are you looking for some weapons? <br> <button class="btn-dialog">Ranged</button> <button class="btn-dialog">Two Handed</button> <button class="btn-dialog">Any armor?</button> </p></div>`;
+                getArena.innerHTML = `<div><p>Are you looking for some weapons? <br> <button class="btn-dialog" onclick="NPCManager.NPCdialog('ranged')">Ranged WIP</button> <button class="btn-dialog" onclick="NPCManager.NPCdialog('twohand')">Two Handed WIP</button> <button class="btn-dialog" onclick="NPCManager.NPCdialog('armor')">Any armor? WIP</button> </p></div>`;
                 break;
         }
-
+    },
+    NPCdialog : function(dialogType) {
+        let getArena = document.querySelector(".arena");
+        switch (dialogType){
+            case "rumors":
+                getArena.innerHTML = `<div><p>"Rumors huh? Well there seems to be a secret tunnel around the forest that leads to a treasure trove. I heard it was guarded by either some bandits or a monster. Just a rumor though, and I wouldn't waste my energy on it personally."<button class="btn-dialog" onclick="TalkManager.TalkEvent()">Thanks!</button></p></div>`;
+                break;
+            case "town":
+                getArena.innerHTML = `<div><p>"Oh, you want to go to town? Its to the north for about two miles. I can take you up there if you want?" <button class="btn-dialog">Yes please! WIP</button> <button class="btn-dialog" onclick="TalkManager.TalkEvent()">Not right now</button></p></div>`;
+                break;
+            case "cheesecake":
+                player.health = player.health + 50;
+                player.gold = player.gold - 150;
+                npc.gold = npc.gold + 150;
+                getArena.innerHTML = `<div><p>Wow thats amazing! Health increased by 50! "Thank you! Come back anytime!"</p></div>`;
+                break;
+            case "applepie":
+                player.health = player.health + 100;
+                player.gold = player.gold - 250;
+                npc.gold = npc.gold + 250;
+                getArena.innerHTML = `<div><p>A wave of euphoria rushes over you. You don't know what was in that pie but you feel way better than before. Health increased by 100!</p></div>`;
+                break;
+        }
     }
 }

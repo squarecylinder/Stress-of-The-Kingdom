@@ -287,6 +287,16 @@ body {
     display: inline-block;
     font-size: 14px;
 }
+.btn-lvlup {
+    background-color: rgb(190, 39, 140);
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
 .btn-reset {
     background-color: black;
     border: none;
