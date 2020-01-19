@@ -243,7 +243,7 @@ let TalkManager = {
         let getArena = document.querySelector(".arena");
         let getEnemy = document.querySelector(".enemy");
         getEnemy.style.visibility = 'hidden';
-        getArena.innerHTML = '<div><p>You can see a few people by a camp fire. As they see you, they introduce themselves. <br> Who would you like to speak to? <button onclick="NPCManager.setNPC(`Josh`)">Josh</button> <button onclick="NPCManager.setNPC(`Amber`)">Amber</button> <button onclick="NPCManager.setNPC(`Jalen`)">Jalen</button></p></div>';
+        getArena.innerHTML = '<div><p>You can see a few people by a camp fire. As they see you, they introduce themselves. <br> Who would you like to speak to? <button class="btn-NPC" onclick="NPCManager.setNPC(`Josh`)">Josh</button> <button  class="btn-NPC" onclick="NPCManager.setNPC(`Amber`)">Amber</button> <button  class="btn-NPC" onclick="NPCManager.setNPC(`Jalen`)">Jalen</button></p></div>';
     
     }
 }

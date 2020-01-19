@@ -346,3 +346,14 @@ justify-content: left;
   display: inline-block;
   font-size: 14px;
 }
+.btn-NPC {
+  background-color: #337c2d;
+  border: thin;
+  border-style: ridge;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
