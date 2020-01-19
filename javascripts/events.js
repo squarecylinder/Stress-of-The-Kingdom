@@ -245,18 +245,6 @@ let TalkManager = {
         getEnemy.style.visibility = 'hidden';
         getArena.innerHTML = '<div><p>You can see a few people by a camp fire. As they see you, they introduce themselves. <br> Who would you like to speak to? <button onclick="NPCManager.setNPC(`Josh`)">Josh</button> <button onclick="NPCManager.setNPC(`Amber`)">Amber</button> <button onclick="NPCManager.setNPC(`Jalen`)">Jalen</button></p></div>';
     
-        switch (npcType) {
-            case "Josh":
-                getArena.innerHTML = "Hi i'm josh, what can I do for ya?";
-                break;
-            case "Amber":
-                getArena.innerHTML = "Hey there sweetie, would you like to buy some sweets?";
-                break;
-            case "Jalen":
-                getArena.innerHTML = "Are you looking for some weapons?";
-                break;
-        }
-
     }
 }
 

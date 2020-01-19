@@ -258,9 +258,6 @@ body {
     font-size: 14px;
 }
 .btn-rest {
-    
-    top: 600px;
-    right: 200px;
     background-color: gray; 
     border: none;
     color: white;
@@ -271,9 +268,6 @@ body {
     font-size: 14px;
 }
 .btn-fight {
-    
-    top: 650px;
-    right: 300px;
     background-color: crimson; 
     border: none;
     color: white;
@@ -284,9 +278,6 @@ body {
     font-size: 14px;
 }
 .btn-talk {
-    
-    top: 650px;
-    right: 200px;
     background-color: darkcyan;
     border: none;
     color: white;
@@ -297,9 +288,6 @@ body {
     font-size: 14px;
 }
 .btn-reset {
-    
-    top: 750px;
-    right: 200px;
     background-color: black;
     border: none;
     color: white;
@@ -346,4 +334,15 @@ justify-content: left;
 }
 .enemy {
     visibility: hidden;
+}
+.btn-dialog {
+  background-color: #2bb15c;
+  border: thin;
+  border-style: ridge;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
 }
