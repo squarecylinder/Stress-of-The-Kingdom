@@ -3,7 +3,6 @@ let npc;
 function NPC(npcType, gold){
     this.npcType = npcType;
     this.gold = gold;
-
 }
 
 let NPCManager = {
@@ -48,7 +47,7 @@ let NPCManager = {
                 player.health = player.health + 50;
                 player.gold = player.gold - 150;
                 npc.gold = npc.gold + 150;
-                getArena.innerHTML = `<div><p>Wow thats amazing! Health increased by 50! "Thank you! Come back anytime!"</p></div> <button class="btn-dialog" onclick=()`;
+                getArena.innerHTML = `<div><p>Wow thats amazing! Health increased by 50! "Thank you! Come back anytime!"<button class="btn-dialog" onclick="TalkManager.TalkEvent()">Thank you!</button></p></div> `;
                 getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 break;
@@ -56,7 +55,7 @@ let NPCManager = {
                 player.health = player.health + 100;
                 player.gold = player.gold - 250;
                 npc.gold = npc.gold + 250;
-                getArena.innerHTML = `<div><p>A wave of euphoria rushes over you. You don't know what was in that pie but you feel way better than before. Health increased by 100!</p></div>`;
+                getArena.innerHTML = `<div><p>A wave of euphoria rushes over you. You don't know what was in that pie but you feel way better than before. Health increased by 100!<button class="btn-dialog" onclick="TalkManager.TalkEvent()">Thank you!</button></p></div>`;
                 getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 break;

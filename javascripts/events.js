@@ -182,6 +182,7 @@ let EventManager = {
             let attackValues = [calcOutputDamager, numberOfHits];
             return attackValues;
         }
+        if (player.health > 0){
         if (getPlayerDexterity >= getEnemyDexterity) {
             let PlayerAttackValues = playerAttack();
             let totalDamage = PlayerAttackValues[0] * PlayerAttackValues[1];
@@ -240,8 +241,12 @@ let EventManager = {
                 } else {
                     getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
                 }
+            }
 
              }
+            }
+            else {
+                getArena.innerHTML = '<div><p>You are in absolutely no condition to fight. Rest up and come back when you are stronger.</p></div>';
             }
             },
 }
