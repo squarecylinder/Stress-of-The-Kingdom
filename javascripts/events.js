@@ -153,6 +153,7 @@ let EventManager = {
         let getPlayerHealth = document.querySelector(".health-player");
         let getEnemyHealth = document.querySelector(".health-enemy");
         let getPlayerGold = document.querySelector(".gold-player");
+        let getPlayerXP = document.querySelector(".xp-player");
         let getPlayerDexterity = player.dexterity;
         let getEnemyDexterity = enemy.dexterity;
         let playerAttack = function () {
@@ -193,6 +194,7 @@ let EventManager = {
                 getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 getEnemyHealth.innerHTML = 'Health: 0';
+                getPlayerXP.innerHTML = 'XP: ' + player.xp;
              } else {
                 let enemyAttackValues = enemyAttack();
                 let totalDamage = enemyAttackValues[0] * enemyAttackValues[1];
@@ -205,6 +207,7 @@ let EventManager = {
                     getArena.innerHTML ='<div><p>After a gruelling battle, you lost. Maybe you should rest before fighting again.<br>Gained ' + enemy.xp + '!';
                     getPlayerHealth.innerHTML = 'Health: 0';
                     getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
+                    getPlayerXP.innerHTML = 'XP: ' + player.xp;
                 } else {
                     getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 }
@@ -218,7 +221,8 @@ let EventManager = {
                     player.xp = player.xp + (enemy.xp / 2);
                     getArena.innerHTML ='<div><p>After a gruelling battle, you lost. Maybe you should rest before fighting again.<br>Gained ' + enemy.xp + '!';
                     getPlayerHealth.innerHTML = 'Health: 0';
-                    getEnemyHealth.innerHTML = 'Health: ' + enemy.health; 
+                    getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
+                    getPlayerXP.innerHTML = 'XP: ' + player.xp;
             } else {
                 let PlayerAttackValues = playerAttack();
                 let totalDamage = PlayerAttackValues[0] * PlayerAttackValues[1];
@@ -232,6 +236,7 @@ let EventManager = {
                     getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                     getPlayerHealth.innerHTML = 'Health: ' + player.health;
                     getEnemyHealth.innerHTML = 'Health: 0';
+                    getPlayerXP.innerHTML = 'XP: ' + player.xp;
                 } else {
                     getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
                 }

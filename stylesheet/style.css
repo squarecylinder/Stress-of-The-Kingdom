@@ -247,6 +247,20 @@ body {
     font-size: large;
     font-family: 'Acme';
 }
+.xp-player{
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    font-size: large;
+    font-family: 'Acme';
+}
+.level-player{
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    font-size: large;
+    font-family: 'Acme';
+}
 .btn-search {
     background-color: #4CAF50; 
     border: thin;

@@ -34,6 +34,9 @@ let NPCManager = {
     },
     NPCdialog : function(dialogType) {
         let getArena = document.querySelector(".arena");
+        let getPlayerHealth = document.querySelector(".health-player");
+        let getPlayerGold = document.querySelector(".gold-player");
+        let getPlayerXP = document.querySelector(".xp-player");
         switch (dialogType){
             case "rumors":
                 getArena.innerHTML = `<div><p>"Rumors huh? Well there seems to be a secret tunnel around the forest that leads to a treasure trove. I heard it was guarded by either some bandits or a monster. Just a rumor though, and I wouldn't waste my energy on it personally."<button class="btn-dialog" onclick="TalkManager.TalkEvent()">Thanks!</button></p></div>`;
@@ -46,13 +49,27 @@ let NPCManager = {
                 player.gold = player.gold - 150;
                 npc.gold = npc.gold + 150;
                 getArena.innerHTML = `<div><p>Wow thats amazing! Health increased by 50! "Thank you! Come back anytime!"</p></div>`;
+                getPlayerGold.innerHTML = 'Gold: ' + player.gold;
+                getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 break;
             case "applepie":
                 player.health = player.health + 100;
                 player.gold = player.gold - 250;
                 npc.gold = npc.gold + 250;
                 getArena.innerHTML = `<div><p>A wave of euphoria rushes over you. You don't know what was in that pie but you feel way better than before. Health increased by 100!</p></div>`;
+                getPlayerGold.innerHTML = 'Gold: ' + player.gold;
+                getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 break;
+            case "meat":
+                if (npc.gold >= 1000) {
+                    player.health = player.health + 300;
+                    player.xp = player.xp + 100;
+                    getArena.innerHTML = '<div><p>"I have Dragon meat, since you have spent so much with me, here take it!"</p><p>You have never tasted anything like this. You feel like you can take on the whole horde by yourself! Health increased by 300! XP increased by 100!</p></div>'
+                    getPlayerHealth.innerHTML = 'Health: ' + player.health;
+                }
+                else {
+                    '<div><p>"Well, its definitely going to cost ya. I doubt you could afford it." This is a secret, if you can figure it out I would be pretty impressed.</p></div>';
+                }
         }
     }
 }
