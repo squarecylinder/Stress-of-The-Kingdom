@@ -243,9 +243,6 @@ let EventManager = {
 
              }
             }
-        
-            
-
             },
 }
 let TalkManager = {

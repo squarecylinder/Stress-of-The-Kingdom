@@ -48,7 +48,7 @@ let NPCManager = {
                 player.health = player.health + 50;
                 player.gold = player.gold - 150;
                 npc.gold = npc.gold + 150;
-                getArena.innerHTML = `<div><p>Wow thats amazing! Health increased by 50! "Thank you! Come back anytime!"</p></div>`;
+                getArena.innerHTML = `<div><p>Wow thats amazing! Health increased by 50! "Thank you! Come back anytime!"</p></div> <button class="btn-dialog" onclick=()`;
                 getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
                 break;
@@ -66,10 +66,12 @@ let NPCManager = {
                     player.xp = player.xp + 100;
                     getArena.innerHTML = '<div><p>"I have Dragon meat, since you have spent so much with me, here take it!"</p><p>You have never tasted anything like this. You feel like you can take on the whole horde by yourself! Health increased by 300! XP increased by 100!</p></div>'
                     getPlayerHealth.innerHTML = 'Health: ' + player.health;
+                    getPlayerXP.innerHTML = "XP: " + player.xp;
                 }
                 else {
-                    '<div><p>"Well, its definitely going to cost ya. I doubt you could afford it." This is a secret, if you can figure it out I would be pretty impressed.</p></div>';
+                    getArena.innerHTML = '<div><p>"Well, its definitely going to cost ya. I doubt you could afford it." This is a secret, if you can figure it out I would be pretty impressed.</p></div>';
                 }
+                break;
         }
     }
 }
