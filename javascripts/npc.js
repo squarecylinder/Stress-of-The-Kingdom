@@ -44,20 +44,30 @@ let NPCManager = {
                 getArena.innerHTML = `<div><p>"Oh, you want to go to town? Its to the north for about two miles. I can take you up there if you want?" <button class="btn-dialog">Yes please! WIP</button> <button class="btn-dialog" onclick="TalkManager.TalkEvent()">Not right now</button></p></div>`;
                 break;
             case "cheesecake":
+                if (player.gold >= 150 ){
                 player.health = player.health + 50;
                 player.gold = player.gold - 150;
                 npc.gold = npc.gold + 150;
                 getArena.innerHTML = `<div><p>Wow thats amazing! Health increased by 50! "Thank you! Come back anytime!"<button class="btn-dialog" onclick="TalkManager.TalkEvent()">Thank you!</button></p></div> `;
                 getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
+            }
+                else {
+                    getArena.innerHTML = '<div><p>"Come back when you have enough cash darling."</p></div>'
+                }
                 break;
             case "applepie":
+                if (player.gold >= 250 ){
                 player.health = player.health + 100;
                 player.gold = player.gold - 250;
                 npc.gold = npc.gold + 250;
                 getArena.innerHTML = `<div><p>A wave of euphoria rushes over you. You don't know what was in that pie but you feel way better than before. Health increased by 100!<button class="btn-dialog" onclick="TalkManager.TalkEvent()">Thank you!</button></p></div>`;
                 getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
+            }
+            else {
+                getArena.innerHTML = '<div><p>"Come back when you have enough cash darling."</p></div>'
+            }
                 break;
             case "meat":
                 if (npc.gold >= 1000) {
