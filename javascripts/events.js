@@ -141,8 +141,8 @@ let EventManager = {
                 break;
             case 2:
                 enemy = thuuxenk;
-                
-                getArena.innerHTML = "<div><p>WIP, you wouldn't win anyway. Just reroll a monster.</p></div?"
+                getArena.innerHTML = '<div><p>You are fighting a ' + enemy.enemyType + '<button class="btn-attack" onclick="EventManager.FightEvent()">Attack!</button></p></div>';
+                break;
         }
         getEnemy.innerHTML = '<img src="img/avatar-enemy/' + enemy.enemyType.toLowerCase() + '.jpg" alt="' + enemy.enemyType + '" class="img-enemy"><div><h3 class="type-enemy">' + enemy.enemyType + '</h3><p class="health-enemy">Health: ' + enemy.health + '</p><p class="mana-enemy">Mana: ' + enemy.mana + '</P><p class="dexterity-enemy>Dexterity :' + enemy.dexterity + '</p></div>';
     },
@@ -176,7 +176,7 @@ let EventManager = {
             } else {
                 calcBaseDamage = enemy.strength * enemy.dexterity / 1000;
             }
-            let offsetDamage = Math.floor(Math.random() * Math.floor(6))
+            let offsetDamage = Math.floor(Math.random() * Math.floor(10))
             let calcOutputDamager = calcBaseDamage + offsetDamage;
             let numberOfHits = Math.floor(Math.random() * Math.floor(enemy.dexterity / 6) / 2) + 1 ;
             let attackValues = [calcOutputDamager, numberOfHits];
