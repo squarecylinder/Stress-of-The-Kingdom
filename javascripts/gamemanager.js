@@ -18,7 +18,7 @@ let GameManager = {
         getClassPick.style.visibility = "hidden";
         let getActions = document.querySelector(".actions");
         getActions.style.visibility = "visible";
-        getActions.innerHTML = '<a href="#" class="CPWarrior" onclick="PlayerManager.setClass(`Warrior`)"><img src="img/avatar-player/warrior.jpg" alt="warrior"><div><h3>Warrior</h3></div></a><a href="#" class="CPRogue" onclick="PlayerManager.setClass(`Rogue`)"><img src="img/avatar-player/rogue.jpg" alt="rogue"><div><h3>Rogue</h3></div></a><a href="#" class="CPMage" onclick="PlayerManager.setClass(`Mage`)"><img src="img/avatar-player/mage.jpg" alt="mage"><div><h3>Mage</h3></div></a><a href="#" class="CPHunter" onclick="PlayerManager.setClass(`Hunter`)"><img src="img/avatar-player/hunter.jpg" alt="hunter"><div><h3>Hunter</h3></div></a>';
+        getActions.innerHTML = '';
 
     },
     resetplayer : function () {
