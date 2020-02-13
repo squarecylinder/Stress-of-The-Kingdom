@@ -78,7 +78,7 @@ let NPCManager = {
                     getPlayerXP.innerHTML = "XP: " + player.xp;
                 }
                 else {
-                    getArena.innerHTML = '<div><p>"Well, its definitely going to cost ya. I doubt you could afford it." This is a secret, if you can figure it out I would be pretty impressed.</p></div>';
+                    getArena.innerHTML = '<div><p>"Well, its definitely going to cost ya. I doubt you could afford it." WIP</p></div>';
                 }
                 break;
         }
