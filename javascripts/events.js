@@ -88,8 +88,6 @@ let EventManager = {
                     break;
             }
         }
-        
-        
     },
     RestEvent: function() {
         let getEnemy = document.querySelector(".enemy");

@@ -64,7 +64,7 @@ let PlayerManager = {
             player.dexterity = player.dexterity + 50;
             player.gold = player.gold + 75;
             player.level = player.level + 1;
-            player.xp = player.xp = 0;
+            player.xp = player.xp - 100;
             getArena.innerHTML = `<div><p>You leveled up!<br>Level: ` + player.level + `!<br>Health: ` + player.health + `!<br>Mana: ` + player.mana  + `!<br>Strength: ` + player.strength + `!<br>Dexterity: ` + player.dexterity + `!<br>Gold: ` + player.gold + `!<br> Keep Going!</p></div>`;
             getPlayerXP.innerHTML = 'XP: ' + player.xp;
             getPlayerLevel.innerHTML = 'Level: ' + player.level;

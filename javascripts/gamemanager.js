@@ -11,7 +11,6 @@ let GameManager = {
         getActions.style.visibility = "hidden";
         getInterface.style.visibility = "visible";
         getInterface.innerHTML = '<div><button class="btn-classpick" onclick="GameManager.setClassPick()">Pick a class!</button></div>';
-
         },
     setClassPick: function(classType) {
         let getClassPick = document.querySelector(".btn-classpick");
