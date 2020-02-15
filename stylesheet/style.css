@@ -225,6 +225,7 @@ body {
     background-color: black;
     font-size: large;
     font-family: 'Acme';
+    visibility: hidden;
 }
 .strength-player{
     font-weight: bold;
