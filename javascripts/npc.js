@@ -1,21 +1,20 @@
 let npc;
-let ambergold;
-function NPC(npcType, gold){
+let ambergold = 0;
+function NPC(npcType){
     this.npcType = npcType;
-    this.gold = gold;
 }
 
 let NPCManager = {
     setNPC: function(npcType) {
         switch (npcType) {
             case "Josh":
-                npc = new NPC(npcType, 50);
+                npc = new NPC(npcType);
                 break;
             case "Amber":
-                npc = new NPC(npcType, gold);
+                npc = new NPC(npcType);
                 break;
             case "Jalen":
-                npc = new NPC(npcType, 100);
+                npc = new NPC(npcType);
                 break;
         }
         let getArena = document.querySelector(".arena");
@@ -47,7 +46,7 @@ let NPCManager = {
                 if (player.gold >= 150 ){
                 player.health = player.health + 50;
                 player.gold = player.gold - 150;
-                npc.gold = npc.gold + 150;
+                ambergold = ambergold + 150;
                 getArena.innerHTML = `<div><p>Wow thats amazing! Health increased by 50! "Thank you! Come back anytime!"<button class="btn-dialog" onclick="TalkManager.TalkEvent()">Thank you!</button></p></div> `;
                 getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
@@ -60,7 +59,7 @@ let NPCManager = {
                 if (player.gold >= 250 ){
                 player.health = player.health + 100;
                 player.gold = player.gold - 250;
-                npc.gold = npc.gold + 250;
+                ambergold = ambergold + 250;
                 getArena.innerHTML = `<div><p>A wave of euphoria rushes over you. You don't know what was in that pie but you feel way better than before. Health increased by 100!<button class="btn-dialog" onclick="TalkManager.TalkEvent()">Thank you!</button></p></div>`;
                 getPlayerGold.innerHTML = 'Gold: ' + player.gold;
                 getPlayerHealth.innerHTML = 'Health: ' + player.health;
@@ -70,15 +69,16 @@ let NPCManager = {
             }
                 break;
             case "meat":
-                if (npc.gold >= 1000) {
+                if (ambergold >= 1000) {
                     player.health = player.health + 300;
                     player.xp = player.xp + 100;
+                    ambergold = ambergold - 1000;
                     getArena.innerHTML = '<div><p>"I have Dragon meat, since you have spent so much with me, here take it!"</p><p>You have never tasted anything like this. You feel like you can take on the whole horde by yourself! Health increased by 300! XP increased by 100!</p></div>'
                     getPlayerHealth.innerHTML = 'Health: ' + player.health;
                     getPlayerXP.innerHTML = "XP: " + player.xp;
                 }
                 else {
-                    getArena.innerHTML = '<div><p>"Well, its definitely going to cost ya. I doubt you could afford it." WIP</p></div>';
+                    getArena.innerHTML = '<div><p>"Well, I may have something for a more loyal customer." She says with a sly wink and smile.</p></div>';
                 }
                 break;
         }
