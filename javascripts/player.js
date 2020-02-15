@@ -21,8 +21,6 @@ let PlayerManager = {
             break;
         case "Mage":
             player = new Player(classType, 80, 200, 0, 50, 200, 50, 0, 1);
-            let getPlayerMana = document.querySelector(".mana-player");
-            getPlayerMana.style.visibility = "visibile";
             break;
         case "Hunter":
             player = new Player(classType, 200, 0, 0, 120, 200, 100, 0, 1);
