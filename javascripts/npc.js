@@ -1,5 +1,5 @@
 let npc;
-
+let ambergold;
 function NPC(npcType, gold){
     this.npcType = npcType;
     this.gold = gold;
@@ -12,7 +12,7 @@ let NPCManager = {
                 npc = new NPC(npcType, 50);
                 break;
             case "Amber":
-                npc = new NPC(npcType, 75);
+                npc = new NPC(npcType, gold);
                 break;
             case "Jalen":
                 npc = new NPC(npcType, 100);
